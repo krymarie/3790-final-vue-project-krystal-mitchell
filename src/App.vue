@@ -1,4 +1,6 @@
 <template>
+<!-- Install Pritier -->
+
 <!-- Changed my codepen to HTML markup and saved hours 
 a few things will need to be adjusted to work with the CLI format but shouldn't take mutch
 so much easier playing around in code pen for instant visualization without the constant rebuild
@@ -104,7 +106,7 @@ work when they are working-->
 
 
 
-  <v-app>
+  <!-- <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
@@ -123,11 +125,21 @@ work when they are working-->
     <v-content>
       <HelloWorld/>
     </v-content>
-  </v-app>
+  </v-app> -->
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,
+  },
+  data: () => ({
+    //not currently using this update with axios call
+  }),
+};
 
 const stats = [
   {
@@ -269,14 +281,4 @@ const vm = new Vue({
     },
   },
 })
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-  data: () => ({
-    //
-  }),
-};
 </script>
