@@ -37,7 +37,7 @@ work when they are working-->
         <v-icon>email</v-icon>
       </v-btn>
       <v-menu offset-y="offset-y">
-        <v-btn flat="flat" slot="activator" small="small">Monster Account Manager
+        <v-btn flat="flat" slot="activator" small="small">FLC Account Manager
           <v-icon>keyboard_arrow_down</v-icon>
         </v-btn>
         <v-list>
@@ -129,12 +129,12 @@ work when they are working-->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import CRM from './components/CRM';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    CRM,
   },
   data: () => ({
     //not currently using this update with axios call
