@@ -118,7 +118,13 @@ export default {
     ecosystem: [
     ]}),
 }
-
+//move this to it's own file
+//set up api for numbers below
+//grab and cache these numbers with a daily job
+//job will simply pull basic count and totals for
+// - new leads since last login on last login timestamp
+// - total sales this week use sales data from last '+7 days' or '1 week'
+// - then with '+1 month' for both
 const stats = [
   {
     number: '42',
@@ -138,6 +144,7 @@ const stats = [
   },
 ]
 
+//this could be from a DB and sorted based on creation_date or due_Date...
 const tasks = [
   {
     id: 0,
@@ -153,6 +160,9 @@ const tasks = [
   },
 ]
 
+//this ia all the leads and theyre hard coded wich works but this is definitly
+//a great place to pull from api or i this case axios. use egar loading to
+//improve UX and reduce loadtime
 const newLeads = [
   {
     firstName: 'Giselbert',
