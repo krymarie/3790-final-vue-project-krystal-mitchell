@@ -118,6 +118,31 @@ export default {
     ecosystem: [
     ]}),
 }
+
+<li v-for=""
+
+//this is all the stuff that Thor taught today that i'll use when I add the axios
+//axios
+methods: {
+  getDataFromAxios() {
+    axios.get('https://URLwithTheRoutIWantToSaveTime.com');
+    .then(response => {
+        const allLeadData = response.data
+        //this part only needed for firebase data
+        const objectsToArray = Object.entires(allCoursesObj).map(e => 
+        Object.assign(e[1], {kry: e[0]}));
+        console.log(ojectsToArray);
+        this.courses = ojectsToArray;
+        });
+        
+        //don't need to do any of this is your server response with beautiful json
+      
+  };
+};
+
+//this is Thor's notes on routs
+
+
 //move this to it's own file
 //set up api for numbers below
 //grab and cache these numbers with a daily job
