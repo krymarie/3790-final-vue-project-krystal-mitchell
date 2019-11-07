@@ -1,18 +1,15 @@
 <template>
   <v-container>
-    <v-layout
-      text-center
-      wrap
-    >
+    <v-layout text-center wrap>
       <v-flex xs12>
-       <!-- Changed my codepen to HTML markup and saved hours 
-a few things will need to be adjusted to work with the CLI format but shouldn't take mutch
-so much easier playing around in code pen for instant visualization without the constant rebuild
-even with php artisan vallet or gulp watch- or yarn serve or npm run serve or or or....
-only because every once in a while i hard refresh before it recompiles and think my changes don't 
-work when they are working-->
-<div id="app">
+
+<!-- this ="app" fills in the 
+use maxes examples on routes
+SEE BELOW don't need both v-app forom vuetify and id="app" non vuetify way-->
+
+<!-- <div id="app"> -->
   <v-app light="light">
+    <!-- wait until i find what's missing here first before moving it back to app.vue -->
     <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
       <v-toolbar class="blue darken-3">
         <v-list>
@@ -65,7 +62,7 @@ work when they are working-->
           </v-flex>
           <v-flex xs12="xs12" md6="md6">
             <v-layout wrap="wrap">
-              <v-flex v-for="stat in stats" xs6="xs6">
+               <v-flex v-for="stat in stats" xs6="xs6"> <!--rendering multiple times ?-->
                 <v-card class="text-xs-center" height="100%">
                   <v-card-text>
                     <div class="display-1 mb-2">{{ stat.number }}</div>{{ stat.label }}
@@ -106,41 +103,55 @@ work when they are working-->
       </v-container>
     </v-content>
   </v-app>
-</div>
+<!-- </div>-->
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+//add routes here or in router.js
+//after routes
+//mode: 'history';//will get rid of the hashtag in the domain...
+//history mode won't always work with all servers
+
+
+
+// import Router from 'vue-router';
+// import store from '../store';//add this
+// import VUE from '../vue';//check this since i moved everything around
+
+
+// Vue.use (router);
+
 export default {
   data: () => ({
     ecosystem: [
     ]}),
 }
 
-<li v-for=""
+// <li v-for=""
 
 //this is all the stuff that Thor taught today that i'll use when I add the axios
 //axios
-methods: {
-  getDataFromAxios() {
-    axios.get('https://URLwithTheRoutIWantToSaveTime.com');
-    .then(response => {
-        const allLeadData = response.data
-        //this part only needed for firebase data
-        const objectsToArray = Object.entires(allCoursesObj).map(e => 
-        Object.assign(e[1], {kry: e[0]}));
-        console.log(ojectsToArray);
-        this.courses = ojectsToArray;
-        });
+// methods: {
+//   getDataFromAxios() {
+//     axios.get('https://URLwithTheRoutIWantToSaveTime.com');
+//     .then(response => {
+//         const allLeadData = response.data
+//         //this part only needed for firebase data
+//         const objectsToArray = Object.entires(allCoursesObj).map(e => 
+//         Object.assign(e[1], {kry: e[0]}));
+//         console.log(ojectsToArray);
+//         this.courses = ojectsToArray;
+//         });
         
-        //don't need to do any of this is your server response with beautiful json
+//         //don't need to do any of this is your server response with beautiful json
       
-  };
-};
+//   };
+// };
 
-//this is Thor's notes on routs
+//this is Thor's notes on routes
 
 
 //move this to it's own file

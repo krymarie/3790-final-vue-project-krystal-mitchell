@@ -1,16 +1,12 @@
 <template>
 <!-- Install Pritier -->
   <v-app>
-
-    <!-- Consider getting rid of this completly with CRM and just linke to CRM
-    pages that each have their part and consider moving the head of the CRM back here 
-    or better yet break it up give it it's own vue file mport it here
-    you are the best rubber duck ever -->
-
+    <!-- import v-navigation-drawer and v-toolbar 
+    since those will be used on all pages of this CRM-->
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
-        <span class="font-weight-light">An Unecessary Bar for CRM design</span>
+        <span class="font-weight-light">An Unecessary Bar Save for example for where to break up CRM into chunkc</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
