@@ -1,37 +1,67 @@
 <template>
 <!-- Install Pritier -->
   <v-app>
-    <!-- import v-navigation-drawer and v-toolbar 
-    since those will be used on all pages of this CRM-->
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">An Unecessary Bar Save for example for where to break up CRM into chunkc</span>
-      </v-toolbar-title>
+ 
+    
+    <!-- again not sure if app="app" is needed with vutify with v-app is doing the same thing--> -->
+<v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
+      <v-toolbar class="blue darken-3">
+        <v-list>
+          <v-list-tile @click="">
+            <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>Krystal's CRM</v-list-tile-title>
+<v-icon>mdi-mouse</v-icon>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar><v-list>
+      <v-list-tile v-for="(title, icon) in mainMenu" @click=""><v-list-tile-action>
+<v-icon> {{ icon }}</v-icon>
+</v-list-tile-action>
+<v-list-tile-content>
+<v-list-tile-title> {{ title }}</v-list-tile-title>
+</v-list-tile-content>  
+      </v-list-tile></v-list>
+    </v-navigation-drawer>
+    <v-toolbar class="blue darken-4" app="app">
+      <v-toolbar-side-icon @click.stop="clickToggleDrawer"></v-toolbar-side-icon>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
+      <v-btn icon="icon">
+        <v-icon>search</v-icon>
       </v-btn>
-    </v-app-bar>
-
-<!-- Import content from a seperate .vue file 
-just like all the compents i set up every day at work -->
-    <v-content>
-      <CRM/>
+      <v-btn icon="icon">
+        <v-icon>email</v-icon>
+      </v-btn>
+      <v-menu offset-y="offset-y">
+        <v-btn flat="flat" slot="activator" small="small">FLC Account Manager
+          <v-icon>keyboard_arrow_down</v-icon>
+        </v-btn>
+        <v-list>
+          <v-list-tile @click="">
+            <v-icon class="mr-2">settings</v-icon>
+            <v-list-tile-title>Settings</v-list-tile-title>
+          </v-list-tile>
+          <v-list-tile @click="">
+            <v-icon class="mr-2">exit_to_app</v-icon>
+            <v-list-tile-title>Logout</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+      <v-avatar class="mr-2" size="36"><img src="https://www.uvu.edu/dgm/web-design-dev/images/interaction/quote-krystal-mitchell.png"/></v-avatar>
+    </v-toolbar>
+    <v-content CRM> <!-- possibly this CRM here similar to app...-->
+      <CRM></CRM> <!-- something like this onely prittier sees an error -->
     </v-content>
   </v-app>
 </template>
 
 <script>
-import CRM from './components/CRM';
+import CRM from './components/CRM';//route to file looks correct time to rebuild
+import Vue from 'vue';
 
 export default {
   name: 'App',
   components: {
+    Vue,
     CRM,
   },
   data: () => ({
@@ -39,118 +69,7 @@ export default {
   }),
 };
 
-const stats = [
-  {
-    number: '42',
-    label: 'New leads this week',
-  },
-  {
-    number: '$8,312',
-    label: 'Sales this week',
-  },
-  {
-    number: '233',
-    label: 'New leads this month',
-  },
-  {
-    number: '$24,748',
-    label: 'Sales this month',
-  },
-]
-
-const tasks = [
-  {
-    id: 0,
-    title: 'Book meeting for Thursday'
-  },
-  {
-    id: 1,
-    title: 'Review new leads'
-  },
-  {
-    id: 2,
-    title: 'Be awesome!'
-  },
-]
-
-const newLeads = [
-  {
-    firstName: 'Giselbert',
-    lastName: 'Hartness',
-    email: 'ghartness0@mail.ru',
-    company: 'Kling LLC',
-  },
-  {
-    firstName: 'Honey',
-    lastName: 'Allon',
-    email: 'hallon1@epa.gov',
-    company: 'Rogahn-Hermann',
-  },
-  {
-    firstName: 'Tommy',
-    lastName: 'Rickards',
-    email: 'trickards2@timesonline.co.uk',
-    company: 'Kreiger, Wehner and Lubowitz',
-  },
-  {
-    firstName: 'Giffy',
-    lastName: 'Farquharson',
-    email: 'gfarquharson3@goo.gl',
-    company: 'Heathcote-Funk',
-  },
-  {
-    firstName: 'Rahel',
-    lastName: 'Matches',
-    email: 'rmatches4@sfgate.com',
-    company: 'Maggio, Russel and Feeney',
-  },
-  {
-    firstName: 'Krystal',
-    lastName: 'Natte',
-    email: 'knatte5@opera.com',
-    company: 'Sanford-Feeney',
-  },
-  {
-    firstName: 'Ronnica',
-    lastName: 'Galliver',
-    email: 'rgalliver6@epa.gov',
-    company: 'Schaefer Group',
-  },
-  {
-    firstName: 'Jenny',
-    lastName: 'Bugge',
-    email: 'jbugge7@independent.co.uk',
-    company: 'Gutmann, Miller and Prosacco',
-  },
-  {
-    firstName: 'Tracee',
-    lastName: 'Viscovi',
-    email: 'tviscovi8@techcrunch.com',
-    company: 'Anderson, Kohler and Renner',
-  },
-  {
-    firstName: 'Teodor',
-    lastName: 'Fitzsimmons',
-    email: 'tfitzsimmons9@mediafire.com',
-    company: 'Durgan-Kovacek',
-  },
-]
-
-const newLeadsHeaders = [
-  {
-    text: 'Name',
-    value: 'firstName',
-  },
-  {
-    text: 'Email',
-    value: 'email',
-  },
-  {
-    text: 'Company',
-    value: 'company',
-  },
-]
-
+//left only the drawer and mainMenue
 const vm = new Vue({
   el: '#app',
   data: {
@@ -163,19 +82,12 @@ const vm = new Vue({
       file_copy: 'Invoices',
       settings: 'Settings',
     },
-    stats,
-    tasks,
-    newLeads,
-    newLeadsHeaders,
-    newLeadsSearch: '',
   },
+
+  //leave the Drawer logic
   methods: {
     clickToggleDrawer() {
       this.drawer = !this.drawer
-    },
-    clickDeleteTask(task) {
-      const i = this.tasks.indexOf(task)
-      this.tasks.splice(i, 1)
     },
   },
 })
