@@ -1,5 +1,4 @@
 <template>
-<!-- Install Pritier -->
   <v-app>
  
     
@@ -8,7 +7,7 @@
       <v-toolbar class="blue darken-3">
         <v-list>
           <v-list-tile @click="">
-            <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>Krystal's CRM</v-list-tile-title>
+            <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>FLC CRM</v-list-tile-title>
 <v-icon>mdi-mouse</v-icon>
             </v-list-tile-content>
           </v-list-tile>
@@ -69,7 +68,8 @@ export default {
   }),
 };
 
-//left only the drawer and mainMenue
+//left only the drawer and mainMenu //keep using french menue meaning petite
+// watch for the extra "e" old habits die hard and break code
 const vm = new Vue({
   el: '#app',
   data: {
