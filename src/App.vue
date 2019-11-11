@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app light="light">
  
     
     <!-- again not sure if app="app" is needed with vutify with v-app is doing the same thing--> -->

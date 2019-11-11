@@ -10,7 +10,7 @@ use maxes examples on routes
 SEE BELOW don't need both v-app forom vuetify and id="app" non vuetify way-->
 <!-- is this the missing piece look at code i did at work today-->
 <!-- <div id="CRM"> -->
-  <v-app light="light">
+  
     <!-- wait until i find what's missing here first before moving it back to app.vue -->
     <v-content>
       <v-container class="pa-4" fluid="fluid" grid-list-md="grid-list-md">
@@ -60,7 +60,6 @@ SEE BELOW don't need both v-app forom vuetify and id="app" non vuetify way-->
         </v-layout>
       </v-container>
     </v-content>
-  </v-app>
 <!-- </div>-->
       </v-flex>
     </v-layout>
