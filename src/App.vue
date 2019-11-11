@@ -75,13 +75,14 @@ const vm = new Vue({
   data: {
     drawer: true,
     mainMenu: {
-      dashboard: 'Dashboard',
-      people: 'Leads',
-      business: 'Companies',
-      business_center: 'Deals',
-      file_copy: 'Invoices',
+      home: 'Home',
+      people: 'Parents/Teachers',
+      person: 'Students',
+      info: 'Analytics',
       settings: 'Settings',
     },
+    ///don't forgtet ABOVE the first term pulls the icon for the main menue items
+    //that's why 'person' and 'people'...that's the name of the material icon.
   },
 
   //leave the Drawer logic

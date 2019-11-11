@@ -117,20 +117,20 @@ export default {
 
 const stats = [
   {
-    number: '42',
-    label: 'New leads this week',
+    number: '45,678',//pull array and getCount
+    label: 'Accounts',//consider diffrent data
   },
   {
-    number: '$8,312',
-    label: 'Sales this week',
+    number: '42',//pull accounts with created timestamp timeBetween...now and 30days < now
+    label: 'New Accounts',
   },
   {
-    number: '233',
-    label: 'New leads this month',
+    number: '233', //pull array and getCount
+    label: 'Completed Programs',
   },
   {
-    number: '$24,748',
-    label: 'Sales this month',
+    number: '24,748', //pull array and getCount
+    label: 'Programs in Progress',
   },
 ]
 
@@ -159,61 +159,61 @@ const newLeads = [
     firstName: 'Giselbert',
     lastName: 'Hartness',
     email: 'ghartness0@mail.ru',
-    company: 'Kling LLC',
+    company: 'Idaho: Victor',
   },
   {
     firstName: 'Honey',
     lastName: 'Allon',
     email: 'hallon1@epa.gov',
-    company: 'Rogahn-Hermann',
+    company: 'Utah: Utah County',
   },
   {
     firstName: 'Tommy',
     lastName: 'Rickards',
     email: 'trickards2@timesonline.co.uk',
-    company: 'Kreiger, Wehner and Lubowitz',
+    company: 'Idaho: Victor',
   },
   {
     firstName: 'Giffy',
     lastName: 'Farquharson',
     email: 'gfarquharson3@goo.gl',
-    company: 'Heathcote-Funk',
+    company: 'California: Canyon Country',
   },
   {
     firstName: 'Rahel',
     lastName: 'Matches',
     email: 'rmatches4@sfgate.com',
-    company: 'Maggio, Russel and Feeney',
+    company: 'Idaho: Victor',
   },
   {
     firstName: 'Krystal',
     lastName: 'Natte',
     email: 'knatte5@opera.com',
-    company: 'Sanford-Feeney',
+    company: 'Massachusetts: Worcester',
   },
   {
     firstName: 'Ronnica',
     lastName: 'Galliver',
     email: 'rgalliver6@epa.gov',
-    company: 'Schaefer Group',
+    company: 'Massachusetts: Worcester',
   },
   {
     firstName: 'Jenny',
     lastName: 'Bugge',
     email: 'jbugge7@independent.co.uk',
-    company: 'Gutmann, Miller and Prosacco',
+    company: 'California: Canyon Country',
   },
   {
     firstName: 'Tracee',
     lastName: 'Viscovi',
     email: 'tviscovi8@techcrunch.com',
-    company: 'Anderson, Kohler and Renner',
+    company: 'Massachusetts: Worcester',
   },
   {
     firstName: 'Teodor',
     lastName: 'Fitzsimmons',
     email: 'tfitzsimmons9@mediafire.com',
-    company: 'Durgan-Kovacek',
+    company: 'Utah: Utah County',
   },
 ]
 
@@ -227,8 +227,8 @@ const newLeadsHeaders = [
     value: 'email',
   },
   {
-    text: 'Company',
-    value: 'company',
+    text: 'Area',
+    value: 'company',//update all 'company' to area above not using that data
   },
 ]
 
