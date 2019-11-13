@@ -7,7 +7,7 @@
       <v-toolbar class="blue darken-3">
         <v-list>
           <v-list-tile @click="">
-            <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>FLC CRM</v-list-tile-title>
+            <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>FLC CRM</v-list-tile-title.title>
 <v-icon>mdi-mouse</v-icon>
             </v-list-tile-content>
           </v-list-tile>

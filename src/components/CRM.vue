@@ -1,46 +1,26 @@
 <template>
+<!-- looks like this is all duplicate in the v-content container comment out for now
   <v-container>
-    <!-- later when cleaning up layout check if this 
-    is from what i did in codepen looks wrong-->
     <v-layout text-center wrap>
-      <v-flex xs12>
-
-<!-- this ="app" fills in the 
-use maxes examples on routes
-SEE BELOW don't need both v-app forom vuetify and id="app" non vuetify way-->
-<!-- is this the missing piece look at code i did at work today-->
-<!-- <div id="CRM"> -->
+      <v-flex xs12> -->
   
-    <!-- wait until i find what's missing here first before moving it back to app.vue -->
+    <!-- CONTENT -->
     <v-content>
       <v-container class="pa-4" fluid="fluid" grid-list-md="grid-list-md">
         <v-layout wrap="wrap">
           <v-flex xs12="xs12">
             <h1 class="display-1 mb-1">Dashboard</h1>
           </v-flex>
-          <v-flex xs12="xs12" md6="md6">
+          <v-flex xs12="xs12" md6="md6" lg12="lg12">
             <v-layout wrap="wrap">
-               <v-flex v-for="stat in stats" xs6="xs6"> <!--rendering multiple times ?-->
-                <v-card class="text-xs-center" height="100%">
-                  <v-card-text>
-                    <div class="display-1 mb-2">{{ stat.number }}</div>{{ stat.label }}
-                  </v-card-text>
-                </v-card>
-              </v-flex>
+                  <v-flex v-for="stat in stats" xs6="xs6"> <!-- should rener multiple time for multiple rows -->
+                  <v-card class="text-xs-center" height="100%">
+                    <v-card-text>
+                      <div class="display-1 mb-2">{{ stat.number }}</div>{{ stat.label }}
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
             </v-layout>
-          </v-flex>
-          <v-flex md6="md6">
-            <v-card height="100%">
-              <v-card-title class="grey light-4">Tasks</v-card-title>
-              <v-data-table class="mt-1" :items="tasks" hide-headers="hide-headers" hide-actions="hide-actions">
-                <template slot="items" slot-scope="props">
-                  <td>
-                    <v-checkbox @click="clickDeleteTask(props.item)"></v-checkbox>
-                  </td>
-                  <td>{{ props.item.title }}</td>
-                </template>
-              </v-data-table>
-            </v-card>
           </v-flex>
           <v-flex xs12="xs12">
             <v-card>
@@ -60,13 +40,14 @@ SEE BELOW don't need both v-app forom vuetify and id="app" non vuetify way-->
         </v-layout>
       </v-container>
     </v-content>
-<!-- </div>-->
-      </v-flex>
+      <!-- </v-flex>
     </v-layout>
-  </v-container>
+  </v-container> -->
 </template>
+
 <script>
 
+// THIS WEEKENDS CODING PARY IS ALL ROUTES 
 //add routes here or in router.js
 //after routes
 //mode: 'history';//will get rid of the hashtag in the domain...
