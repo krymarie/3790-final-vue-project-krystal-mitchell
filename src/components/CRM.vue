@@ -11,7 +11,8 @@
           <v-flex xs12="xs12">
             <h1 class="display-1 mb-1">Dashboard</h1>
           </v-flex>
-          <v-flex xs12="xs12" md6="md6" lg12="lg12">
+          <!-- <v-flex xs12="xs12" md12="md12" lg12="lg12"> -->
+          <v-flex xs12="xs12">
             <v-layout wrap="wrap">
                   <v-flex v-for="stat in stats" xs6="xs6"> <!-- should rener multiple time for multiple rows -->
                   <v-card class="text-xs-center" height="100%">
@@ -98,11 +99,11 @@ export default {
 const stats = [
   {
     number: '45,678',//pull array and getCount
-    label: 'Accounts',//consider diffrent data
+    label: 'New Students',//consider diffrent data
   },
   {
     number: '42',//pull accounts with created timestamp timeBetween...now and 30days < now
-    label: 'New Accounts',
+    label: 'New Homes',
   },
   {
     number: '233', //pull array and getCount
@@ -114,26 +115,9 @@ const stats = [
   },
 ]
 
-//this could be from a DB and sorted based on creation_date or due_Date...
-//once everything is working add due date isset($this.data.tasks.dueDate) format if ftc timestamp...
-const tasks = [
-  {
-    id: 0,
-    title: 'Book meeting for Thursday'
-  },
-  {
-    id: 1,
-    title: 'Review new leads'
-  },
-  {
-    id: 2,
-    title: 'Be awesome!'
-  },
-]
-
-//this ia all the leads and they're hard coded wich works but this is definitly
-//a great place to pull from api or i this case axios. use egar loading to
-//improve UX and reduce loadtime
+//stick this in a firebase json file like max shoes
+//For scaleability possibly set up a job that pulls this data to newrelic
+//or S3 at the begining of the day
 const newLeads = [
   {
     firstName: 'Giselbert',
