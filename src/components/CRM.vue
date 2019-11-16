@@ -1,15 +1,10 @@
 <template>
-<!-- looks like this is all duplicate in the v-content container comment out for now
-  <v-container>
-    <v-layout text-center wrap>
-      <v-flex xs12> -->
-  
     <!-- CONTENT -->
     <v-content>
       <v-container class="pa-4" fluid="fluid" grid-list-md="grid-list-md">
         <v-layout wrap="wrap">
           <v-flex xs12="xs12">
-            <h1 class="display-1 mb-1">Dashboard</h1>
+            <h1 class="display-1 mb-1">Accounts</h1>
           </v-flex>
           <!-- <v-flex xs12="xs12" md12="md12" lg12="lg12"> -->
           <v-flex xs12="xs12">
@@ -41,9 +36,6 @@
         </v-layout>
       </v-container>
     </v-content>
-      <!-- </v-flex>
-    </v-layout>
-  </v-container> -->
 </template>
 
 <script>
@@ -61,8 +53,8 @@ import Vue from 'vue';//check this since i moved everything around
 export default {
   name: 'CRM',
   data: () => ({
-    ecosystem: [
-    ]}),
+    // ecosystem: [
+    // ]}),
 }
 
 // <li v-for="$this.data.allTheDataYouWantAtYourFingers.justLikeWork"
@@ -98,12 +90,12 @@ export default {
 
 const stats = [
   {
-    number: '45,678',//pull array and getCount
-    label: 'New Students',//consider diffrent data
+    number: '45,678',//pull users with updatedAt dates > 30 days
+    label: 'Active Students',
   },
   {
-    number: '42',//pull accounts with created timestamp timeBetween...now and 30days < now
-    label: 'New Homes',
+    number: '42',//lastActive timestamt between Cabon::now() and Cabon::now()+30 days
+    label: 'Active Accounts',
   },
   {
     number: '233', //pull array and getCount
