@@ -2,7 +2,7 @@
   <v-app light="light">
  
     
-    <!-- again not sure if app="app" is needed with vutify with v-app is doing the same thing--> -->
+    <!-- v-app and app="app" don't need both in vuetify-->
 <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
       <v-toolbar class="blue darken-3">
         <v-list>
@@ -47,8 +47,10 @@
       </v-menu>
       <v-avatar class="mr-2" size="36"><img src="https://www.uvu.edu/dgm/web-design-dev/images/interaction/quote-krystal-mitchell.png"/></v-avatar>
     </v-toolbar>
+<!-- One of the other of the two below not both? -->
     <v-content CRM> <!-- possibly this CRM here similar to app...-->
       <CRM></CRM> <!-- something like this onely prittier sees an error -->
+
     </v-content>
   </v-app>
 </template>

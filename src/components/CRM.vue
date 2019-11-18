@@ -28,7 +28,7 @@
                 <template slot="items" slot-scope="props">
                   <td>{{ props.item.firstName }} {{ props.item.lastName }}</td>
                   <td>{{ props.item.email }}</td>
-                  <td>{{ props.item.company }}</td>
+                  <td>{{ props.item.area }}</td>
                 </template>
               </v-data-table>
             </v-card>
@@ -94,7 +94,7 @@ const stats = [
     label: 'Active Students',
   },
   {
-    number: '42',//lastActive timestamt between Cabon::now() and Cabon::now()+30 days
+    number: '42',//lastActive timestamt between Cabon::now() and $ThirdyDayFromNow => (Cabon::now()+30 days);
     label: 'Active Accounts',
   },
   {
@@ -115,61 +115,61 @@ const newLeads = [
     firstName: 'Giselbert',
     lastName: 'Hartness',
     email: 'ghartness0@mail.ru',
-    company: 'Idaho: Victor',
+    area: 'Idaho: Victor',
   },
   {
     firstName: 'Honey',
     lastName: 'Allon',
     email: 'hallon1@epa.gov',
-    company: 'Utah: Utah County',
+    area: 'Utah: Utah County',
   },
   {
     firstName: 'Tommy',
     lastName: 'Rickards',
     email: 'trickards2@timesonline.co.uk',
-    company: 'Idaho: Victor',
+    area: 'Idaho: Victor',
   },
   {
     firstName: 'Giffy',
     lastName: 'Farquharson',
     email: 'gfarquharson3@goo.gl',
-    company: 'California: Canyon Country',
+    area: 'California: Canyon Country',
   },
   {
     firstName: 'Rahel',
     lastName: 'Matches',
     email: 'rmatches4@sfgate.com',
-    company: 'Idaho: Victor',
+    area: 'Idaho: Victor',
   },
   {
     firstName: 'Krystal',
     lastName: 'Natte',
     email: 'knatte5@opera.com',
-    company: 'Massachusetts: Worcester',
+    area: 'Massachusetts: Worcester',
   },
   {
     firstName: 'Ronnica',
     lastName: 'Galliver',
     email: 'rgalliver6@epa.gov',
-    company: 'Massachusetts: Worcester',
+    area: 'Massachusetts: Worcester',
   },
   {
     firstName: 'Jenny',
     lastName: 'Bugge',
     email: 'jbugge7@independent.co.uk',
-    company: 'California: Canyon Country',
+    area: 'California: Canyon Country',
   },
   {
     firstName: 'Tracee',
     lastName: 'Viscovi',
     email: 'tviscovi8@techcrunch.com',
-    company: 'Massachusetts: Worcester',
+    area: 'Massachusetts: Worcester',
   },
   {
     firstName: 'Teodor',
     lastName: 'Fitzsimmons',
     email: 'tfitzsimmons9@mediafire.com',
-    company: 'Utah: Utah County',
+    area: 'Utah: Utah County',
   },
 ]
 
@@ -184,7 +184,7 @@ const newLeadsHeaders = [
   },
   {
     text: 'Area',
-    value: 'company',//update all 'company' to area above not using that data
+    value: 'area',
   },
 ]
 
