@@ -1,7 +1,5 @@
 .DS_Store
 node_modules/
-# not sure if this helps try .cache/vue ir stack overflow if this doesn't work
-node_modules/.cache/vue
-
 dist/
 npm-debug.log
+.env
