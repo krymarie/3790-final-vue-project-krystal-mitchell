@@ -47,35 +47,36 @@
       </v-menu>
       <v-avatar class="mr-2" size="36"><img src="https://www.uvu.edu/dgm/web-design-dev/images/interaction/quote-krystal-mitchell.png"/></v-avatar>
     </v-toolbar>
-<!-- One of the other of the two below not both? -->
-    <v-content CRM> <!-- possibly this CRM here similar to app...-->
-      <CRM></CRM> <!-- something like this onely prittier sees an error -->
-
+<!-- Import CRM Content Here -->
+    <v-content> 
+      <CRM/>
     </v-content>
+
   </v-app>
 </template>
 
 <script>
-import CRM from './components/CRM';//route to file looks correct time to rebuild
-import Vue from 'vue';
+import CRM from './components/CRM';
+
+//ADD A FEW ROUTES HERE TO 
+//add routes here or in router.js
+//after routes
+//mode: 'history';//will get rid of the hashtag in the domain...
+//but history mode won't always work with all servers
+
+// import Router from 'vue-router'; //follow max on this
+// import store from '../store';//add this
+// import Vue from 'vue';//check this since i moved everything around
+// Vue.use (router);
 
 export default {
   name: 'App',
   components: {
-    Vue,
     CRM,
   },
-  data: () => ({
-    //not currently using this update with axios call
-  }),
-};
 
-//left only the drawer and mainMenu //keep using french menue meaning petite
-// watch for the extra "e" old habits die hard and break code
-const vm = new Vue({
-  el: '#app',
-  data: {
-    drawer: true,
+  data: () => ({
+     drawer: true,
     mainMenu: {
       home: 'Home',
       people: 'Parents/Teachers',
@@ -83,15 +84,11 @@ const vm = new Vue({
       info: 'Analytics',
       settings: 'Settings',
     },
-    ///don't forgtet ABOVE the first term pulls the icon for the main menue items
-    //that's why 'person' and 'people'...that's the name of the material icon.
-  },
-
-  //leave the Drawer logic
+  }),
   methods: {
     clickToggleDrawer() {
       this.drawer = !this.drawer
     },
   },
-})
+};
 </script>

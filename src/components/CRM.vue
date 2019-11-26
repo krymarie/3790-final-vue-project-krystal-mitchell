@@ -1,6 +1,4 @@
 <template>
-    <!-- CONTENT -->
-    <v-content>
       <v-container class="pa-4" fluid="fluid" grid-list-md="grid-list-md">
         <v-layout wrap="wrap">
           <v-flex xs12="xs12">
@@ -35,59 +33,15 @@
           </v-flex>
         </v-layout>
       </v-container>
-    </v-content>
 </template>
 
 <script>
-
-// THIS WEEKENDS CODING PARY IS ALL ROUTES 
-//add routes here or in router.js
-//after routes
-//mode: 'history';//will get rid of the hashtag in the domain...
-//but history mode won't always work with all servers
-
-// import Router from 'vue-router'; //follow max on this
-// import store from '../store';//add this
-import Vue from 'vue';//check this since i moved everything around
-// Vue.use (router);
-export default {
-  name: 'CRM',
-  data: () => ({
-    // ecosystem: [
-    // ]}),
-}
-
-// <li v-for="$this.data.allTheDataYouWantAtYourFingers.justLikeWork"
-
-//this is all the stuff that Thor taught today that i'll use when I add the axios
-//axios
-// methods: {
-//   getDataFromAxios() {
-//     axios.get('https://URLwithTheRoutIWantToSaveTime.com');
-//     .then(response => {
-//         const allLeadData = response.data
-//         //this part only needed for firebase data
-//         const objectsToArray = Object.entires(allCoursesObj).map(e => 
-//         Object.assign(e[1], {kry: e[0]}));
-//         console.log(ojectsToArray);
-//         this.courses = ojectsToArray;
-//         });
-        
-//         //don't need to do any of this is your server response with beautiful json
-      
-//   };
-// };
-
-//this is Thor's notes on routes
-
-//move this to it's own file as Max did
-//set up api for numbers below
-//grab and cache these numbers with a daily job
-//job will simply pull basic count and totals for
-// - new leads since last login on last login timestamp
-// - total sales this week use sales data from last '+7 days' or '1 week'
-// - then with '+1 month' for both
-
+//consider adding this to editor.js then import above using
+//import { stats } from 'path/to/confic/folder/vue-editor.js'
+//really tho if i have time use axios user data imported to get count....lables are the same numbers will be logic count pulled from axios
+//if axios is pulled once a day as a job this can easily be pulled via AWS or newrelic
+//check with this vue template if this needs a export?
+//esport const stats...
 const stats = [
   {
     number: '45,678',//pull users with updatedAt dates > 30 days
@@ -105,11 +59,7 @@ const stats = [
     number: '24,748', //pull array and getCount
     label: 'Programs in Progress',
   },
-]
-
-//stick this in a firebase json file like max shoes
-//For scaleability possibly set up a job that pulls this data to newrelic
-//or S3 at the begining of the day
+];
 const newLeads = [
   {
     firstName: 'Giselbert',
@@ -171,7 +121,7 @@ const newLeads = [
     email: 'tfitzsimmons9@mediafire.com',
     area: 'Utah: Utah County',
   },
-]
+];
 
 const newLeadsHeaders = [
   {
@@ -186,22 +136,58 @@ const newLeadsHeaders = [
     text: 'Area',
     value: 'area',
   },
-]
+];
 
-const vm = new Vue({
+
+export default {
   el: '#app',
-  data: {
+  data: () => ({
     stats,
     tasks,
     newLeads,
     newLeadsHeaders,
     newLeadsSearch: '',
-  },
+  //nothing here yet just standard template set up
+  }),
   methods: {
     clickDeleteTask(task) {
       const i = this.tasks.indexOf(task)
       this.tasks.splice(i, 1)
     },
   },
-})
+};
+
+
+//USE THIS AND NOTES FRMO CLASS TO IMPORT AXIOS HERE FOR USERS
+// <li v-for="$this.data.allTheDataYouWantAtYourFingers.justLikeWork"
+//this is all the stuff that Thor taught today that i'll use when I add the axios
+//axios
+// methods: {
+//   getDataFromAxios() {
+//     axios.get('https://URLwithTheRoutIWantToSaveTime.com');
+//     .then(response => {
+//         const allLeadData = response.data
+//         //this part only needed for firebase data
+//         const objectsToArray = Object.entires(allCoursesObj).map(e => 
+//         Object.assign(e[1], {kry: e[0]}));
+//         console.log(ojectsToArray);
+//         this.courses = ojectsToArray;
+//         });
+        
+//         //don't need to do any of this is your server response with beautiful json
+      
+//   };
+// };
+
+//move this to it's own file as Max did
+//set up api for numbers below
+//grab and cache these numbers with a daily job
+//job will simply pull basic count and totals for
+// - new leads since last login on last login timestamp
+// - total sales this week use sales data from last '+7 days' or '1 week'
+// - then with '+1 month' for both
+//stick this in a firebase json file like max shoes
+//For scaleability possibly set up a job that pulls this data to newrelic
+//or S3 at the begining of the day
+
 </script>
