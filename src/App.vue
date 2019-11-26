@@ -71,6 +71,7 @@ import CRM from './components/CRM';
 
 export default {
   name: 'App',
+  el: '#app',
   components: {
     CRM,
   },
