@@ -42,7 +42,7 @@
 //if axios is pulled once a day as a job this can easily be pulled via AWS or newrelic
 //check with this vue template if this needs a export?
 //esport const stats...
-const stats = [
+export const stats = [
   {
     number: '45,678',//pull users with updatedAt dates > 30 days
     label: 'Active Students',
@@ -60,7 +60,7 @@ const stats = [
     label: 'Programs in Progress',
   },
 ];
-const newLeads = [
+export const newLeads = [
   {
     firstName: 'Giselbert',
     lastName: 'Hartness',
@@ -123,7 +123,7 @@ const newLeads = [
   },
 ];
 
-const newLeadsHeaders = [
+export const newLeadsHeaders = [
   {
     text: 'Name',
     value: 'firstName',
@@ -147,8 +147,101 @@ export default {
     newLeads,
     newLeadsHeaders,
     newLeadsSearch: '',
-  //nothing here yet just standard template set up
-  }),
+    stats = [
+  {
+    number: '45,678',//pull users with updatedAt dates > 30 days
+    label: 'Active Students',
+  },
+  {
+    number: '42',//lastActive timestamt between Cabon::now() and $ThirdyDayFromNow => (Cabon::now()+30 days);
+    label: 'Active Accounts',
+  },
+  {
+    number: '233', //pull array and getCount
+    label: 'Completed Programs',
+  },
+  {
+    number: '24,748', //pull array and getCount
+    label: 'Programs in Progress',
+  },
+],
+newLeadsHeaders = [
+  {
+    text: 'Name',
+    value: 'firstName',
+  },
+  {
+    text: 'Email',
+    value: 'email',
+  },
+  {
+    text: 'Area',
+    value: 'area',
+  },
+],
+newLeads = [
+  {
+    firstName: 'Giselbert',
+    lastName: 'Hartness',
+    email: 'ghartness0@mail.ru',
+    area: 'Idaho: Victor',
+  },
+  {
+    firstName: 'Honey',
+    lastName: 'Allon',
+    email: 'hallon1@epa.gov',
+    area: 'Utah: Utah County',
+  },
+  {
+    firstName: 'Tommy',
+    lastName: 'Rickards',
+    email: 'trickards2@timesonline.co.uk',
+    area: 'Idaho: Victor',
+  },
+  {
+    firstName: 'Giffy',
+    lastName: 'Farquharson',
+    email: 'gfarquharson3@goo.gl',
+    area: 'California: Canyon Country',
+  },
+  {
+    firstName: 'Rahel',
+    lastName: 'Matches',
+    email: 'rmatches4@sfgate.com',
+    area: 'Idaho: Victor',
+  },
+  {
+    firstName: 'Krystal',
+    lastName: 'Natte',
+    email: 'knatte5@opera.com',
+    area: 'Massachusetts: Worcester',
+  },
+  {
+    firstName: 'Ronnica',
+    lastName: 'Galliver',
+    email: 'rgalliver6@epa.gov',
+    area: 'Massachusetts: Worcester',
+  },
+  {
+    firstName: 'Jenny',
+    lastName: 'Bugge',
+    email: 'jbugge7@independent.co.uk',
+    area: 'California: Canyon Country',
+  },
+  {
+    firstName: 'Tracee',
+    lastName: 'Viscovi',
+    email: 'tviscovi8@techcrunch.com',
+    area: 'Massachusetts: Worcester',
+  },
+  {
+    firstName: 'Teodor',
+    lastName: 'Fitzsimmons',
+    email: 'tfitzsimmons9@mediafire.com',
+    area: 'Utah: Utah County',
+  },
+],
+}),
   methods: {
     clickDeleteTask(task) {
       const i = this.tasks.indexOf(task)
