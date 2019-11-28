@@ -146,7 +146,7 @@ export default {
     newLeads,
     newLeadsHeaders,
     newLeadsSearch: '',
-}),
+  }),
   methods: {
     clickDeleteTask(task) {
       const i = this.tasks.indexOf(task)

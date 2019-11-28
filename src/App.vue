@@ -4,7 +4,10 @@ possibly combine them just to get it built then work on breaking it up again -->
   <v-app light="light">
  
     
-    <!-- v-navigation drawer-->
+    <!-- v-navigation drawer
+    thsi is where the css is dropped for this part of the product not sure why
+    works for everything i import check i'm using vutify for all my styling so...
+    look into what's diffrent-->
     <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
       <v-toolbar class="blue darken-3">
         <v-list>
@@ -85,7 +88,7 @@ import CRM from './components/CRM';
 // Vue.use (router);
 
 export default {
-  name: 'App',
+  //name: 'App',
   el: '#app',
   components: {
     CRM,
