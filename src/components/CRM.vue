@@ -60,6 +60,8 @@ export const stats = [
     label: 'Programs in Progress',
   },
 ];
+
+//troubleshoot why last names aren't populating
 export const newLeads = [
   {
     firstName: 'Giselbert',
@@ -135,8 +137,8 @@ export const newLeadsHeaders = [
   {
     text: 'Area',
     value: 'area',
-  },
-];
+  }
+]
 
 
 export default {

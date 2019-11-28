@@ -95,7 +95,7 @@ export default {
   },
 
   data: () => ({
-     drawer: true,
+    drawer: true,
     mainMenu: {
       home: 'Home',
       people: 'Parents/Teachers',
@@ -103,11 +103,11 @@ export default {
       info: 'Analytics',
       settings: 'Settings',
     },
-  }),
-  methods: {
-    clickToggleDrawer() {
-      this.drawer = !this.drawer
+  
+    methods: {
+      clickToggleDrawer() {
+        this.drawer = !this.drawer
+      },
     },
-  },
 };
 </script>
