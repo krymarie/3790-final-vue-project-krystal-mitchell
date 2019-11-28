@@ -88,11 +88,17 @@ import CRM from './components/CRM';
 // Vue.use (router);
 
 export default {
-  name: '#app',
+  name: 'App',
   el: '#app',
   
   components: {
     CRM,
+  },
+
+  methods: {
+    clickToggleDrawer() {
+      this.drawer = !this.drawer
+    },
   },
 
   data: () => ({
@@ -104,12 +110,8 @@ export default {
       info: 'Analytics',
       settings: 'Settings',
     },
-  };
+  }),
   
-    methods: {
-      clickToggleDrawer() {
-        this.drawer = !this.drawer
-      },
-    },
+    
 };
 </script>
