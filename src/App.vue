@@ -2,11 +2,15 @@
 <!-- Broke out the top and side nav wrong my errors aren't css but vutify
 possibly combine them just to get it built then work on breaking it up again -->
   <v-app light="light">
- 
+    
+    <!-- Import Log In Modal Here -->
+    <v-content> 
+      <LogInModal/>
+    </v-content>
     
     <!-- v-navigation drawer
     thsi is where the css is dropped for this part of the product not sure why
-    works for everything i import check i'm using vutify for all my styling so...
+    works for everything else i import...figure this out...
     look into what's diffrent-->
     <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
       <v-toolbar class="blue darken-3">
@@ -93,6 +97,7 @@ export default {
   
   components: {
     CRM,
+    LogInModal
   },
 
   methods: {
