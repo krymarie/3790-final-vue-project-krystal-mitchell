@@ -6,9 +6,9 @@ possibly combine them just to get it built then work on breaking it up again -->
     <!-- Import Log In Modal Here -->
     <!-- @if(logIn = false) What I'm doing at work pretty sure this is laravel specific bummer so much easier leaves tags alone-->
     <!-- <v-if="logIn = false"> -->
-    <!-- <v-content>  
+    <v-content>  
       <LogInModal/>
-    </v-content> -->
+    </v-content>
     
     
     <!-- @else -->
@@ -87,6 +87,10 @@ possibly combine them just to get it built then work on breaking it up again -->
 
 <script>
 import CRM from './components/CRM';
+import LogInModal from './components/LogInModal';
+import Vue from 'vue'
+import App from './App.vue'
+import vuetify from './plugins/vuetify';
 
 //ADD A FEW ROUTES HERE TO 
 //add routes here or in router.js
@@ -105,7 +109,7 @@ export default {
   
   components: {
     CRM,
-    //LogInModal
+    LogInModal
   },
 
   methods: {
