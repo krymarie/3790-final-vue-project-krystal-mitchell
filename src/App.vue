@@ -4,16 +4,22 @@ possibly combine them just to get it built then work on breaking it up again -->
   <v-app light="light">
     
     <!-- Import Log In Modal Here -->
-    <v-content> 
+    <!-- @if(logIn = false) What I'm doing at work pretty sure this is laravel specific bummer so much easier leaves tags alone-->
+    <!-- <v-if="logIn = false"> -->
+    <v-content>  
       <LogInModal/>
     </v-content>
     
+    
+    <!-- @else -->
+    <!-- <v-if="logIn = true">  -->
     <!-- v-navigation drawer
     thsi is where the css is dropped for this part of the product not sure why
     works for everything else i import...figure this out...
     look into what's diffrent-->
     <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
       <v-toolbar class="blue darken-3">
+        
         <v-list>
           <v-list-tile @click="">
             <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>FLC Account Manager</v-list-tile-title.title>
@@ -21,7 +27,9 @@ possibly combine them just to get it built then work on breaking it up again -->
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
+      
       </v-toolbar>
+      
       <v-list>
         <v-list-tile v-for="(title, icon) in mainMenu" @click="">
           <v-list-tile-action>
@@ -73,7 +81,7 @@ possibly combine them just to get it built then work on breaking it up again -->
     <v-content> 
       <CRM/>
     </v-content>
-
+<!-- @endif -->
   </v-app>
 </template>
 
