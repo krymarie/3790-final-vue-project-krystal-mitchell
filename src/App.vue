@@ -77,7 +77,7 @@ possibly combine them just to get it built then work on breaking it up again -->
       <v-avatar class="mr-2" size="36"><img src="https://avatars3.githubusercontent.com/u/4356894?s=400&v=4"/></v-avatar>
 
     </v-toolbar>
-<!-- Import CRM Content Here -->
+<!-- Import CRM Content Here If Log In True && if index/CRM(home).vue-->
     <v-content> 
       <CRM/>
     </v-content>
