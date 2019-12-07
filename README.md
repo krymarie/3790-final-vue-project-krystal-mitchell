@@ -37,14 +37,14 @@ https://github.com/krymarie
 # when the drop down is initialized. 
 
 #App connects to a server using HTTP
-#
+# add axious call don't use firebase because it won't even count towards points
 
 #At least 3 routes provided
-#
+# enable three of the side nave to work this wil be great for the actual site
 
 #State managed using Vuex
-#
+# already doing this to some degree but set it up when logIn true to store user logIn and logIn True
 
 #App structured, documented, and deployed
-#
+# at the very end
 

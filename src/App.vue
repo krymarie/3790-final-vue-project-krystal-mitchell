@@ -18,8 +18,8 @@ possibly combine them just to get it built then work on breaking it up again -->
     works for everything else i import...figure this out...
     look into what's diffrent-->
     <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
+
       <v-toolbar class="blue darken-3">
-        
         <v-list>
           <v-list-tile @click="">
             <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>FLC Account Manager</v-list-tile-title.title>
@@ -27,11 +27,13 @@ possibly combine them just to get it built then work on breaking it up again -->
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
-      
       </v-toolbar>
       
+      <!-- Look here to wee where the css is breaking could be one missig tag from when i transfered it from codePen -->
       <v-list>
+        <!-- @click is here waiting for me to add the logic that will updat wich mainMenu item is slected css and routes -->
         <v-list-tile v-for="(title, icon) in mainMenu" @click="">
+          
           <v-list-tile-action>
             <v-icon> {{ icon }}</v-icon>
           </v-list-tile-action>
@@ -39,10 +41,13 @@ possibly combine them just to get it built then work on breaking it up again -->
           <v-list-tile-content>
             <v-list-tile-title> {{ title }}</v-list-tile-title>
           </v-list-tile-content>  
+
         </v-list-tile>
       </v-list>
+
     </v-navigation-drawer>
 
+    <!-- This is also missing it's css so somthing is missing here as well -->
     <!-- Toolbar -->
     <v-toolbar class="blue darken-4" app="app">
       

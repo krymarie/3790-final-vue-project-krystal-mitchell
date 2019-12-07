@@ -41,7 +41,7 @@ h1 {
   text-align: center;
   width: 400px;
   height: fit-content;
-//  max-width: 22em;
+  max-width: 22em;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);

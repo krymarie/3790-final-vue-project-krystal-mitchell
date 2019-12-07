@@ -44,11 +44,11 @@
 //esport const stats...
 export const stats = [
   {
-    number: '45,678',//pull users with updatedAt dates > 30 days
+    number: '45,678',//pull user count with updatedAt dates > 30 days from timestamp now see php version below
     label: 'Active Students',
   },
   {
-    number: '42',//lastActive timestamt between Cabon::now() and $ThirdyDayFromNow => (Cabon::now()+30 days);
+    number: '42',//lastActive moment date-and-time timestamt between this is PHP specific Cabon::now() and $ThirdyDayFromNow => (Cabon::now()+30 days);
     label: 'Active Accounts',
   },
   {
