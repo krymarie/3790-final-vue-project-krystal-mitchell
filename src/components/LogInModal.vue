@@ -94,72 +94,71 @@ h1 {
 
 <template>
     <!-- CONTENT -->
-    <v-content>
+  <v-content>
       <div id="app">
-  <button @click="showModal = true" class="button">Log In</button>
-  <transition name="fade" appear>
-    <div class="modal-overlay" 
-         v-if="showModal" 
-         @click="showModal = false"></div>
-  </transition>
-  <transition name="pop" appear>
-    <div class="modal" 
-         role="dialog" 
-         v-if="showModal"
-         >
-      <h1>LogIn Transition</h1>
-      <v-flex xs8>
-        <v-text-field
-                name="input-10-1"
-                label="Enter your username"
-                hint="Favorite Car"
-                v-model="username"
-                min="8"
-                :append-icon="e1 ? 'visibility' : 'visibility_off'"
-                :append-icon-cb="() => (e1 = !e1)"
-                :type="e1 ? 'password' : 'text'"
-                counter
-              ></v-text-field>
         
+        <button @click="showModal = true" class="button">Log In</button>
+        
+        <transition name="fade" appear>
+          <div class="modal-overlay" 
+              v-if="showModal" 
+              @click="showModal = false"></div>
+        </transition>
+  
+        <transition name="pop" appear>
+          <div class="modal" 
+              role="dialog" 
+              v-if="showModal">
+            
+            <h1>LogIn Transition</h1>
+            
+            <v-flex xs8>
               <v-text-field
-                name="input-10-1"
-                label="Enter your password"
-                hint="At least 8 characters"
-                v-model="password"
-                min="8"
-                :append-icon="e2 ? 'visibility' : 'visibility_off'"
-                :append-icon-cb="() => (e2 = !e2)"
-                :type="e2 ? 'password' : 'text'"
-                counter
-              ></v-text-field>
+                      name="input-10-1"
+                      label="Enter your username"
+                      hint="Favorite Car"
+                      v-model="username"
+                      min="8"
+                      :append-icon="e1 ? 'visibility' : 'visibility_off'"
+                      :append-icon-cb="() => (e1 = !e1)"
+                      :type="e1 ? 'password' : 'text'"
+                      counter>
+              </v-text-field>
+              
+              <v-text-field
+                      name="input-10-1"
+                      label="Enter your password"
+                      hint="At least 8 characters"
+                      v-model="password"
+                      min="8"
+                      :append-icon="e2 ? 'visibility' : 'visibility_off'"
+                      :append-icon-cb="() => (e2 = !e2)"
+                      :type="e2 ? 'password' : 'text'"
+                      counter>
+              </v-text-field>
             </v-flex>
-      <button @click="showModal = false" class="button">Log In</button>
+            
+            <button @click="showModal = false" class="button">Log In</button>
 
-    </div>
-  </transition>
-</div>
+          </div>
+        </transition>
+      </div>
     </v-content>
 </template>
 
 <script>
-new Vue({
-
-  // Mount Vue instance to DOM with `el`
-  // https://vuejs.org/v2/api/#el
+export default {
   el: '#app',
-
-  // State with data
-  // http://vuejs.org/v2/guide/instance.html#Data-and-Methods
-  data() {
+  data: () => ({
     return {
-      showModal: false,
+      showModal: true,
       e1: false,
       e2: true,
       username: 'Mclaren',
       //password: 'Password Visable',
       //password: mclaren,
     }
-  } 
-});
+  }),
+};
 
 </script>

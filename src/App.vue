@@ -129,11 +129,5 @@ export default {
     CRM,
     // LogInModal
   },
-
-  
-
-  
-  
-    
 };
 </script>
