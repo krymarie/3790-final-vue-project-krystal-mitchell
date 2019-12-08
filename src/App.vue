@@ -107,17 +107,6 @@ import CRM from './components/CRM';
 export default {
   name: 'App',
   el: '#app',
-  
-  components: {
-    CRM,
-    // LogInModal
-  },
-
-  methods: {
-    clickToggleDrawer() {
-      this.drawer = !this.drawer
-    },
-  },
 
   data: () => ({
     drawer: true,
@@ -129,6 +118,21 @@ export default {
       settings: 'Settings',
     },
   }),
+
+  methods: {
+    clickToggleDrawer() {
+      this.drawer = !this.drawer
+    },
+  },
+  
+  components: {
+    CRM,
+    // LogInModal
+  },
+
+  
+
+  
   
     
 };

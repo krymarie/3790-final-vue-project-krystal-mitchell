@@ -149,12 +149,13 @@ export default {
     newLeadsHeaders,
     newLeadsSearch: '',
   }),
-  methods: {
-    clickDeleteTask(task) {
-      const i = this.tasks.indexOf(task)
-      this.tasks.splice(i, 1)
-    },
-  },
+  //removed tasks for this project might add back in for assignemnet requierments
+  // methods: {
+  //   clickDeleteTask(task) {
+  //     const i = this.tasks.indexOf(task)
+  //     this.tasks.splice(i, 1)
+  //   },
+  // },
 };
 
 
