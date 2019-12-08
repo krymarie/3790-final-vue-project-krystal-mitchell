@@ -19,12 +19,27 @@ h1 {
 }
 
 .button {
+  position: absolute;
+  top: 80px;
+  right: 20px;
   border: none;
   color: #FFF;
   background: #42b983;
   appearance: none;
   font: inherit;
-  font-size: 1.8rem;
+  font-size: 1rem;
+  padding: .5em 1em;
+  border-radius: .3em;
+  cursor: pointer;
+}
+
+.modalButton {
+  border: none;
+  color: #FFF;
+  background: #42b983;
+  appearance: none;
+  font: inherit;
+  font-size: 1rem;
   padding: .5em 1em;
   border-radius: .3em;
   cursor: pointer;
@@ -97,7 +112,7 @@ h1 {
   <v-content>
       <div id="app">
         
-        <button @click="showModal = true" class="button">Log In</button>
+        <button @click="showModal = true" class="button">Log Out</button>
         
         <transition name="fade" appear>
           <div class="modal-overlay" 
@@ -138,7 +153,7 @@ h1 {
               </v-text-field>
             </v-flex>
             
-            <button @click="showModal = false" class="button">Log In</button>
+            <button @click="showModal = false" class="modalButton">Log In</button>
 
           </div>
         </transition>
@@ -150,14 +165,12 @@ h1 {
 export default {
   el: '#app',
   data: () => ({
-    return {
-      showModal: true,
+      showModal: false,
       e1: false,
       e2: true,
       username: 'Mclaren',
       //password: 'Password Visable',
       //password: mclaren,
-    }
   }),
 };
 

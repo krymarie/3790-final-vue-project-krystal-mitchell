@@ -1,3 +1,4 @@
+
 <template>
 <!-- Broke out the top and side nav wrong my errors aren't css but vutify
 possibly combine them just to get it built then work on breaking it up again -->
@@ -92,6 +93,7 @@ possibly combine them just to get it built then work on breaking it up again -->
 
 <script>
 import CRM from './components/CRM';
+import LogInModal from './components/LogInModal';
 
 //ADD A FEW ROUTES HERE TO 
 //add routes here or in router.js
