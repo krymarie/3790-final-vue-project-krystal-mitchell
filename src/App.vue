@@ -1,7 +1,7 @@
 <template>
 <!-- Broke out the top and side nav wrong my errors aren't css but vutify
 possibly combine them just to get it built then work on breaking it up again -->
-  <v-app light="light">
+  <v-app light="light" app>
     
     <!-- Import Log In Modal Here -->
     <!-- @if(logIn = false) What I'm doing at work pretty sure this is laravel specific bummer so much easier-->
