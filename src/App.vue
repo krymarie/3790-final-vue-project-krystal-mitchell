@@ -6,9 +6,9 @@ possibly combine them just to get it built then work on breaking it up again -->
     <!-- Import Log In Modal Here -->
     <!-- @if(logIn = false) What I'm doing at work pretty sure this is laravel specific bummer so much easier-->
     <!-- <v-if="logIn = false"> -->
-    <!-- <v-content>  
+    <v-content>  
       <LogInModal/>
-    </v-content> -->
+    </v-content>
     
     
     <!-- @else -->
@@ -127,7 +127,7 @@ export default {
   
   components: {
     CRM,
-    // LogInModal
+    LogInModal
   },
 };
 </script>
