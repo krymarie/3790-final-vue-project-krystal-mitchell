@@ -104,7 +104,7 @@ import LogInModal from './components/LogInModal';
 
 // import Router from 'vue-router'; //follow max on this
 // import store from '../store';//add this
-// import Vue from 'vue';//check this since i moved everything around
+import Vue from 'vue';//check this since i moved everything around
 // import VueRouter from 'vue-router'
 // import { routes } from './routes'
 
