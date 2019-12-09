@@ -21,6 +21,7 @@ possibly combine them just to get it built then work on breaking it up again -->
     <v-navigation-drawer v-model="drawer" app="app" stateless="stateless" floating="floating" width="220">
 
       <v-toolbar class="blue darken-3">
+        <!-- <router-view></router-view> -->
         <v-list>
           <v-list-tile @click="">
             <v-list-tile-content><v-list-tile-title.title class=v-icon.mr-2 home>FLC Account Manager</v-list-tile-title.title>
@@ -98,13 +99,20 @@ import LogInModal from './components/LogInModal';
 //ADD A FEW ROUTES HERE TO 
 //add routes here or in router.js
 //after routes
-//mode: 'history';//will get rid of the hashtag in the domain...
+// mode: 'history';//will get rid of the hashtag in the domain...
 //but history mode won't always work with all servers
 
 // import Router from 'vue-router'; //follow max on this
 // import store from '../store';//add this
 // import Vue from 'vue';//check this since i moved everything around
-// Vue.use (router);
+// import VueRouter from 'vue-router'
+// import { routes } from './routes'
+
+// Vue.use(VueRouter);
+
+// const router = new VueRouter({
+//     routes
+// })
 
 export default {
   name: 'App',
