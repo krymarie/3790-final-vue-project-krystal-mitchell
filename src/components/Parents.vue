@@ -36,9 +36,12 @@
 </template>
 
 <script>
-
-//add to editor.js then import above using
+//consider adding this to editor.js then import above using
 //import { stats } from 'path/to/confic/folder/vue-editor.js'
+//really tho if i have time use axios user data imported to get count....lables are the same numbers will be logic count pulled from axios
+//if axios is pulled once a day as a job this can easily be pulled via AWS or newrelic
+//check with this vue template if this needs a export?
+//esport const stats...
 export const stats = [
   {
     number: '45,678',//pull user count with updatedAt dates > 30 days from timestamp now see php version below
@@ -159,23 +162,19 @@ export default {
 //USE THIS AND NOTES FRMO CLASS TO IMPORT AXIOS HERE FOR USERS
 // <li v-for="$this.data.allTheDataYouWantAtYourFingers.justLikeWork"
 //this is all the stuff that Thor taught today that i'll use when I add the axios
-
-//AXIOS
-// methods: {
-//   getDataFromAxios() {
-//     axios.get('https://randomuser.me/api/?results=5000');
-//     .then(response => {
-        
-//         const newLeads = response.data
-//     });
-//   };
-// };
-        // //NOTES: this part only needed for firebase data
+//axios
+methods: {
+  getDataFromAxios() {
+    axios.get('https://randomuser.me/api/?results=50');
+    .then(response => {
+        //const allLeadData = response.data
+        const parents = response.data
+        // //this part only needed for firebase data
         // const objectsToArray = Object.entires(allCoursesObj).map(e => 
         // Object.assign(e[1], {kry: e[0]}));
         // console.log(ojectsToArray);
         // this.courses = ojectsToArray;
-        
+        });
 
 //         $.ajax({
 //   url: 'https://randomuser.me/api/',
@@ -183,12 +182,13 @@ export default {
 //   success: function(data) {
 //     console.log(data);
 //   }
-     
-//COMMENT: don't need to do any of this is your server response with beautiful json
+});
+        
+        //don't need to do any of this is your server response with beautiful json
       
- 
+  };
 
-//MORE NOTES: move this to it's own file as Max did
+//move this to it's own file as Max did
 //set up api for numbers below
 //grab and cache these numbers with a daily job
 //job will simply pull basic count and totals for

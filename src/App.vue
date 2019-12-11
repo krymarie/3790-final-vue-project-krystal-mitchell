@@ -5,14 +5,10 @@ possibly combine them just to get it built then work on breaking it up again -->
   <v-app light="light" app>
     
     <!-- Import Log In Modal Here -->
-    <!-- @if(logIn = false) What I'm doing at work pretty sure this is laravel specific bummer so much easier-->
     <!-- <v-if="logIn = false"> -->
     <v-content>  
       <LogInModal/>
     </v-content>
-    
-    
-    <!-- @else -->
     <!-- <v-if="logIn = true">  -->
     <!-- v-navigation drawer
     thsi is where the css is dropped for this part of the product not sure why
@@ -95,16 +91,10 @@ possibly combine them just to get it built then work on breaking it up again -->
 <script>
 import CRM from './components/CRM';
 import LogInModal from './components/LogInModal';
-
-//ADD A FEW ROUTES HERE TO 
-//add routes here or in router.js
-//after routes
-// mode: 'history';//will get rid of the hashtag in the domain...
-//but history mode won't always work with all servers
-
+import Vue from 'vue';//check this since i moved everything around
 // import Router from 'vue-router'; //follow max on this
 // import store from '../store';//add this
-import Vue from 'vue';//check this since i moved everything around
+
 // import VueRouter from 'vue-router'
 // import { routes } from './routes'
 
@@ -113,6 +103,10 @@ import Vue from 'vue';//check this since i moved everything around
 // const router = new VueRouter({
 //     routes
 // })
+
+//after routes
+// mode: 'history';//will get rid of the hashtag in the domain...
+//but history mode won't always work with all servers
 
 export default {
   name: 'App',
