@@ -35,7 +35,7 @@
 # - Not currently working
 
 # 11.State managed using Vuex
-- [staless use not state?](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/App.vue#L17 "state")
+- [staless use not state](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/App.vue#L17 "state")
 
 # 12.App structured, documented, and deployed
 # - This is the code, documented (here), netlify above
