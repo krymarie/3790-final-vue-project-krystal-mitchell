@@ -22,7 +22,7 @@
 - [Not sure if this is considered a "custom directive" I may have it elsewhere](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/components/LogInModal.vue#L137 "Custom Directive")
 
 # 8.Animation(s) and transition(s) used
--[Animation's and Transitions on LogIn Pop up](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/components/LogInModal.vue#L86 "Animation's and Transitions")
+- [Animation's and Transitions on LogIn Pop up](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/components/LogInModal.vue#L86 "Animation's and Transitions")
 # - Additional animation on click on mail and search icons and 
 # - Clicking on "FLC Account Manager" button on the right does the river effect
 # - On hover over users names gray background color apears
