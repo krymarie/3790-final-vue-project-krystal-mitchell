@@ -1,50 +1,42 @@
 # krystal-mitchell-final-project
 
-# Below clarifys where my requierments for this project are met
-
-# link to the features i'm talking about
-
-# also let him know what buttons aren't enabled
-
-#RUBRIC
-#This criterion is linked to a Learning Outcome Conditional logic and array methods render large lists
+# 1.This criterion is linked to a Learning Outcome Conditional logic and array methods render large lists
 # Renders large lists of users that can be searched or sorted asc desc
 
-#Code encapsulated as single-file components
-# App only holds the nav and logic to import single-file comopnents such as CRM or LogInModal as needed conditionally
+# 2.Code encapsulated as single-file components
+# App only holds the nav and logic to import single-file comopnents such as CRM, LogInModal, Parents, Students
 
-#Code created and managed with real development tools
-# sCode GitHub, and Netlify were used to build this product
+# 3.Code created and managed with real development tools
+# Developed using vsCode, GitHub, and Netlify were used to build this product
 
-#Properly used Git with 4 days of commits per week
-# https://github.com/krymarie
-https://github.com/krymarie
+# 4.Properly used Git with 4 days of commits per week
 [Git Hub Repo](https://github.com/krymarie "Krystal's 28+ green squares")
-#Component communication
-# use props for first name last name
-###add link here to file and line where props are initialized
 
-#User input form with validation
-# logIn has validation and will not allow certain characters in both fields
-# and also inculdes ability to hide or show username and pasword, and give prompts when user begins to type
+# 5.Component communication
+[Used props for first name last name](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/components/CRM.vue#L27 "Krystal's Props")
 
-#Custom directive developed and used
-# put link here where i'm using this
+# 6.User input form with validation
+[LogInModal](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/master/src/components/LogInModal.vue "No Validation Yet") will have this currently do not have any validation, currently inculdes ability to hide or show username and pasword, and give prompts when user begins to type
 
-#Animation(s) and transition(s) used
-# transitions are used on the log in modal, and animations are used on hover and on click on buttons
-# such as the logIn button, the top right corner FLC ACCOUNT MANAGER drop down does a river effect on click
-# when the drop down is initialized. 
+# 7.Custom directive developed and used
+[Not sure if this is considered a "custom directive" I may have it elsewhere](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/components/LogInModal.vue#L137 "Custom Directive")
 
-#App connects to a server using HTTP
-# add axious call don't use firebase because it won't even count towards points
+# 8.Animation(s) and transition(s) used
+[Animation's and Transitions on LogIn Pop up](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/components/LogInModal.vue#L86 "Animation's and Transitions")
+# additional animation on click on mail and search icons and 
+# clicking on "FLC Account Manager" button on the right does the river effect
+# on hover over users names gray background color apears
 
-#At least 3 routes provided
-# enable three of the side nave to work this wil be great for the actual site
+# 9.App connects to a server using HTTP
+[Via Netlify](https://xenodochial-bell-837b66.netlify.com/ "server for App")
 
-#State managed using Vuex
-# already doing this to some degree but set it up when logIn true to store user logIn and logIn True
+# 10.At least 3 routes provided
+[Routes](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/master/src/routes.js "Routes") 
+# not currently working
 
-#App structured, documented, and deployed
-# at the very end
+# 11.State managed using Vuex
+[staless use not state?](https://github.com/krymarie/3790-final-vue-project-krystal-mitchell/blob/b6dea1b5641252944bf4ee86fecf4eddc19d89fe/src/App.vue#L17 "state")
+
+# 12.App structured, documented, and deployed
+# this is the code, documented (here), netlify above
 
